@@ -1,2 +1,2 @@
 # Análisis y Diseño de Algoritmos
-- Coeficiente de CorrelaciPearson
+- Coeficiente de Correlación de Pearson
