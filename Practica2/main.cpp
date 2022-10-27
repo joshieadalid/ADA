@@ -26,7 +26,7 @@ std::string getRow(const std::string &mes, const std::string &cI, const std::str
     return ss.str();
 }
 
-std::basic_stringstream<char> getTable(double cI, double rY, unsigned int n) {
+std::string getTable(double cI, double rY, unsigned int n) {
     std::basic_stringstream<char> ss;
     ss << getRow("Mes", "Capital Inicial", "Interés mensual", "Capital final");
     for (unsigned int i = 0U; i < n * 12U; ++i) {
@@ -37,11 +37,10 @@ std::basic_stringstream<char> getTable(double cI, double rY, unsigned int n) {
         );
     }
 
-
-    return ss;
+    return ss.str();
 }
 
 int main([[maybe_unused]] int argc, char **argv) {
-    std::cout << getTable(std::stod(argv[1]), std::stod(argv[2]), static_cast<unsigned int>(std::stoi(argv[3]))).str();
+    std::cout << getTable(std::stod(argv[1]), std::stod(argv[2]), static_cast<unsigned int>(std::stoi(argv[3])));
     return 0;
 }
